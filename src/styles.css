@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    color: #00BE7D;
+    margin: 0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.banner{
+    background: #141729;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.centerbanner{
+    align-self: center;
+    margin: auto;
+}
+.imageicon{
+    
+    filter: hue-rotate(300deg) brightness(1.2);
+    width: auto;
+    height: 15vh;
+}
+
+.nodel3{
+    align-self: center;
+    margin: auto;
+    display: flex;
+}
+h1{
+    
+    font-size: 4rem;
+}

@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    color: #00BE7D;
+    margin: 0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.banner{
+    background: #141729;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.centerbanner{
+    align-self: center;
+    margin: auto;
+}
+.imageicon{
+    
+    filter: hue-rotate(300deg) brightness(1.2);
+    width: auto;
+    height: 15vh;
+}
+
+.nodel3{
+    align-self: center;
+    margin: auto;
+    display: flex;
+}
+h1{
+    
+    font-size: 4rem;
+}
+h2{
+    color: #000;
+}
+.content{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.demo-hover {
+    background-color: rgba(255,255,255,.7);
+    color: #000;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    opacity: 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.cards{
+    display: flex;
+    width: calc(100vw/2 - 18vw);
+    min-height: calc(100vh/3 - 2vh);
+    margin: 1vh 1vw 1vh 1vw;
+    background: url("http://esensifiksi.com/tf/petir/assets/img/demo/1.png") no-repeat;
+    background-size: 100% auto;
+    background-color: #141729;
+    border: #0b0d1a solid 1px;
+}
+$color-particle: #a3a7c3;
+$spacing: 100;
+$spacingw: 1000px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
+
+.animation-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+/* mixins */
+@function particles($max) {
+    $val: 0px 0px $color-particle;
+    @for $i from 1 through $max {
+      $val: #{$val}, random(95)+vw random($spacing)+vh $color-particle;
+    }
+    @return $val;
+  }
+  
+  @mixin particles($max) {
+    box-shadow: particles($max);
+    border-radius: 50%;
+  }
+  .particle, .particle:after {
+    background: transparent;
+  }
+  
+  .particle:after {
+    position: absolute;
+    content: "";
+    top: $spacing;
+  }
+  
+  .particle-1 {
+    animation: animParticle $time-1 linear infinite;
+    @include particles(100);
+    height: 2px;
+    width: 2px;
+  }
+  
+  .particle-1:after {
+    @include particles(90);
+    height: 2px;
+    width: 2px;
+  }
+  
+  .particle-2 {
+    animation: animParticle $time-2 linear infinite;
+    @include particles(80);
+    height: 2px;
+    width: 2px;
+  }
+  
+  .particle-2:after {
+    @include particles(50);
+    height: 3px;
+    width: 3px;
+  }
+  
+  .particle-3:after {
+    @include particles(110);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+  }
+  
+  .particle-4 {
+    animation: animParticle $time-4 linear infinite;
+    @include particles(120);
+    height: 1px;
+    width: 1px;
+  }
+  
+  .particle-4:after {
+    @include particles(70);
+    height: 1px;
+    width: 1px;
+  }
+  
+  @keyframes animParticle {
+    0%, 100% {
+        transform: translate(0, 0);
+      }
+      
+      50% {
+        transform: translate(150px, 0);
+      }
+      
+      80% {
+        transform: translate(-150px, 0);
+      }
+  }
+  

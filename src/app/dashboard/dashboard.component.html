@@ -1,0 +1,12 @@
+
+
+
+<div class="content">
+  <div class="cards" *ngFor="let i of projects">
+    <a [routerLink]="i.link">
+    <h2 >{{i.title}}</h2>
+    <div>{{i.describe}}</div>
+  </a>
+  </div>
+  
+</div>

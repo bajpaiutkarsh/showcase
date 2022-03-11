@@ -1,0 +1,45 @@
+<form class="content" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="formrow"><label>Name</label>
+        <input id="name" type="text" formControlName="name" class="form-control">
+    </div>
+    <div class="formrow">
+        <label>Address</label>
+        <input id="name" type="text" formControlName="address" class="form-control">
+    </div>
+    <div class="formrow">
+        <label>Add More</label>
+        <button class="btn btn-primary" (click)="addExp()">Add</button>
+    </div>
+<div class="content" formArrayName="experience">
+    <div class="content" *ngFor="let exp of getExp().controls; let i=index" [formGroupName]="i">
+        <div class="marginbottom">
+            <div class="formrow">
+                <label>Company</label>
+                <input id="name" type="text" formControlName="company" class="form-control">
+            </div>
+            <div class="formrow">
+                <label>From*</label>
+                <input id="name" type="date" formControlName="from" class="form-control">
+            </div>
+            <div class="formrow">
+                <label>Till</label>
+                <input id="name" type="date" formControlName="till" class="form-control">
+            </div>
+            <div class="formrow">
+                <label>Position</label>
+                <input id="name" type="text" formControlName="position" class="form-control">
+            </div>
+            <div class="formrow">
+                <button class="btn btn-danger" (click)="remove(i)">Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
+
+<br />
+<div>
+{{this.form.value | json}}
+</div>
